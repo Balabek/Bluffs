@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
     // Animating the "go-to" anchor scroll
-    $('a.anchor').click(function(){
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href') ).offset().top -1
-        }, 800);
-    });
+    // $('a.anchor').click(function(){
+    //     $('html, body').animate({
+    //         scrollTop: $($(this).attr('href') ).offset().top -5
+    //     }, 800);
+    // });
 
 
     // Partner brands slider
@@ -148,22 +148,23 @@ $(document).ready(function() {
     ScrollReveal().reveal('.grouper', {delay: 500, duration: 1400});
     ScrollReveal().reveal('.hogfish', {delay: 500, duration: 1400});
     ScrollReveal().reveal('.gamefish', {delay: 500, duration: 1400});
-    ScrollReveal().reveal('.productbox', {delay: 300});
+    ScrollReveal().reveal('.productbox', {delay: 150});
     ScrollReveal().reveal('.servicebox', {delay: 300});
     ScrollReveal().reveal('.map_holder', {delay: 300});
     ScrollReveal().reveal('.bluffs_contact_form', {delay: 300});
 
 
-    // Color change for hamburger menu SVG
-    $('.navbar-toggler-icon').on('click', function(){
-        $(this).toggleClass('colorfuse');
-    });
-
-
     // Close the collapse navbar after a menu link is clicked
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
+        $('.navbar-toggler-icon').toggleClass('colorfuse');
     });
+
+    // Fancy animation for hamburger menu
+    $('.bluffs_nav_toggler').on('click', function () {
+        $('.animated-icon1').toggleClass('open');
+    });
+
 
 
 });

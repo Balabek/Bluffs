@@ -143,7 +143,14 @@
     .undermap_rect {width: 86%;}
 }
 
+@media screen and (max-width: 480px){
+    .undermap_rect {left: 0; right: 0; margin: 0 auto;}
+}
 
+@media screen and (max-width: 400px){
+    .undermap_rect {height: 380px;}
+    .address_details_holder {left: 17px;}
+}
 
 
 
