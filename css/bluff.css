@@ -103,6 +103,8 @@ li.nav-item > a:hover:after {
 
 button.nav_contact_btn {
     position: relative;
+    font-size: 1rem;
+    line-height: 2.2;
     top: -6px;
     width: 130px;
     height: 42px;
@@ -454,6 +456,12 @@ article.section_intro p {
     background: #32598F;
     box-shadow: 0 2px 5px 0 rgba(63,63,63,0.14);
     border-radius: 30px;
+    transition: 0.2s all ease-in;
+}
+
+.productbox:hover {
+    background: #2e5385;
+    box-shadow: 0 2px 5px 0 rgba(63,63,63,0.53);
 }
 
 .productbox:last-child {
@@ -646,6 +654,14 @@ hr.final_hr {
     color: #ffffff !important;
 }
 
+.bluffs_gallery_slider {
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    bottom: -8px;
+}
+
 .hogfish {
     position: absolute;
     top: 32px;
@@ -656,3 +672,251 @@ hr.final_hr {
     background: url('../img/Hogfish.svg') center center no-repeat;
     background-size: contain;
 }
+
+a.blf_slide_lightbox {
+    cursor: pointer;
+}
+
+img.blf_slide {
+    width: 100%;
+    height: 475px;
+    object-fit: cover;
+}
+
+.slick-prev {
+    z-index: 2;
+    left: 14px;
+}
+
+.slick-next {
+    z-index: 2;
+    right: 14px;
+}
+
+
+
+
+/* ============= */
+/* =========== CONTACT =========== */
+/* ============= */
+
+.gapmaker80 {
+    height: 60px;
+}
+
+.contact_area {
+    position: relative;
+    min-height: 815px;
+    height: auto;
+    padding-top: 80px;
+    background: url("../img/contact_bgd.svg") center center no-repeat;
+    background-size: cover;
+}
+
+.bluffsmap {
+    position: relative;
+    z-index: 5;
+}
+
+.map_holder {
+    position: relative;
+}
+
+.undermap_rect {
+    background: #E8EBF1;
+    width: 605px;
+    height: 385px;
+    position: absolute;
+    z-index: 1;
+    right: 90px;
+    top: 40px;
+}
+
+.address_details_holder {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+.phone small {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #666666;
+}
+
+.phone small i {
+    color: #32598F;
+    margin-right: 4px;
+}
+
+.address small {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #666666;
+}
+
+.address small i {
+    color: #32598F;
+    margin-right: 4px;
+}
+
+.address {
+    margin-bottom: 8px;
+}
+
+.bluffs_contact_form {
+    padding: 12px 22px 26px 22px;
+    background: #ffffff;
+    border-radius: 1px;
+    height: 425px;
+    box-shadow: 0 2px 1103px 0 rgba(0,0,0,0.11);
+}
+
+.form-group {
+    margin-bottom: -6px;
+}
+
+.bluffs_input {
+    font-size: 0.88rem;
+    color: #999999;
+    height: 40px;
+    background: #F9F9F9;
+    border: 1px solid #E1E1E1;
+    border-radius: 1px;
+}
+
+.bluffs_input:focus {
+    background: #F9F9F9;
+    border: 1px solid #E1E1E1 !important;
+}
+
+textarea.bluffs_txtarea {
+    font-size: 0.88rem;
+    color: #999999;
+    height: 133px;
+    background: #F9F9F9;
+    border: 1px solid #E1E1E1;
+    border-radius: 1px;
+    resize: none;
+}
+
+.form-group-button {
+    padding-top: 30px;
+}
+
+button.bluffs_submit_btn {
+    font-size: 1rem;
+    line-height: 3;
+    position: relative;
+    width: 130px;
+    height: 42px;
+    background: #32598F;
+    border-radius: 100px;
+    border: none !important;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    transition: all 0.4s ease-in-out;
+}
+
+button.bluffs_submit_btn:hover {
+    background: #223d62;
+    color: #ffffff;
+}
+
+button.bluffs_submit_btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
+
+/* ============= */
+/* =========== FOOTER =========== */
+/* ============= */
+
+footer.bluffs_footer {
+    position: relative;
+    min-height: 220px;
+    height: auto;
+    background: url('../img/footer_bgd.svg') center center no-repeat;
+    background-size: cover;
+}
+
+.footer_innerbox {
+    position: relative;
+    padding-top: 38px;
+}
+
+.f_socials_holder h6 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.gamefish {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    left: 22px;
+    bottom: 0;
+    width: 303px;
+    height: 83px;
+    background: url('../img/Gamefish.svg') center center no-repeat;
+    background-size: contain;
+}
+
+ul.f_socials {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+}
+
+ul.f_socials li {
+    list-style-type: none;
+    float: left;
+    margin-right: 8px;
+}
+
+ul.f_socials li:last-child {
+    margin-right: initial;
+}
+
+ul.f_socials li a {
+    font-size: 3rem;
+    color: #ffffff;
+    transition: 0.4s all ease-in-out;
+}
+
+ul.f_socials li a:hover {
+    color: #E8EBF1;
+}
+
+.f_notes_holder {
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+}
+
+.f_notes_holder small {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

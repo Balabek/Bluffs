@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+    // Animating the "go-to" anchor scroll
+    $('a.anchor').click(function(){
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href') ).offset().top -1
+        }, 800);
+        // $('.collapse').removeClass('in');
+    });
+
+
     // Partner brands slider
     $('.partner_brands_slider').slick({
         dots: false,
@@ -93,27 +102,63 @@ $(document).ready(function() {
     });
 
 
+    // Gallery Slider + Lightbox
+    let gallerySlider = $('.bluffs_gallery_slider');
+    $(gallerySlider).slick({
+        dots: false,
+        autoplay: false,
+        infinite: true,
+        arrows: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    dots: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    // Animating the "go-to" anchor scroll
-    $('a.anchor').click(function(){
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href') ).offset().top -1
-        }, 800);
-        // $('.collapse').removeClass('in');
+        ]
     });
 
+    $(gallerySlider).slickLightbox({
+        itemSelector: 'a',
+        navigateByKeyboard: true,
+        background: 'rgba(0,0,0,.93)'
+    });
+
+
+    // Subtle fade-in animation for the below-mentioned elements
+    ScrollReveal().reveal('.about_image_holder', {delay: 300});
+    ScrollReveal().reveal('.dorado', {delay: 500, duration: 1400});
+    ScrollReveal().reveal('.crab', {delay: 500, duration: 1400});
+    ScrollReveal().reveal('.grouper', {delay: 500, duration: 1400});
+    ScrollReveal().reveal('.hogfish', {delay: 500, duration: 1400});
+    ScrollReveal().reveal('.gamefish', {delay: 500, duration: 1400});
+    ScrollReveal().reveal('.productbox', {delay: 300});
+    ScrollReveal().reveal('.servicebox', {delay: 300});
+    ScrollReveal().reveal('.map_holder', {delay: 300});
+    ScrollReveal().reveal('.bluffs_contact_form', {delay: 300});
 
 
 });
