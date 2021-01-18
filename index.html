@@ -23,7 +23,6 @@
 
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <!-- "Cera" Web Fonts -->
     <link href="css/webfonts.css" rel="stylesheet">
@@ -40,6 +39,7 @@
     <link href="css/bluff.css" rel="stylesheet">
     <link href="css/mq.css" rel="stylesheet">
 
+
 </head>
 <body>
 
@@ -48,7 +48,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand animate__animated animate__fadeIn" href="#"><img alt="Bluffs logo" src="img/bluffs_logo.svg" class="nav_logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bluffsNavCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bluffs_nav_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bluffsNavCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="bluffsNavCollapse">
@@ -71,7 +71,7 @@
                     <li class="nav-item">
                         <a class="anchor nav-link" href="#gallery">Gallery</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav_btn_item">
                         <button class="anchor btn nav_contact_btn">Contact</button>
                     </li>
                 </ul>
@@ -124,13 +124,27 @@
             <div class="row">
                 <div class="partner_brands_slider_holder">
                     <div class="partner_brands_slider">
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_1.png') center center no-repeat; background-size: contain;"></div>
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_2.png') center center no-repeat; background-size: contain;"></div>
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_3.png') center center no-repeat; background-size: contain;"></div>
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_4.png') center center no-repeat; background-size: contain;"></div>
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_5.png') center center no-repeat; background-size: contain;"></div>
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_6.png') center center no-repeat; background-size: contain;"></div>
-                        <div class="partnerbrand_logo" style="background: url('img/p_brand_7.png') center center no-repeat; background-size: contain;"></div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_1.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_2.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_3.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_4.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_5.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_6.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
+                        <div class="brand" style="width: 100%; display: inline-block;">
+                            <div class="partnerbrand_logo" style="background: url('img/p_brand_7.png') center center no-repeat; background-size: contain;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,7 +154,7 @@
     <div id="aboutUs" class="about_area">
         <div class="container">
             <div class="row about_row">
-                <div class="col-md-7 col-sm-12 about_textual_holder">
+                <div class="col-xl-7 col-lg-9 col-md-12 about_textual_holder">
                     <div class="section_ttl_holder">
                         <h2 class="title-font section_title">About Us</h2>
                         <span class="title_deco leftaligned"></span>
@@ -164,7 +178,7 @@
                         </p>
                     </article>
                 </div>
-                <div class="col-md-5 col-sm-12 about_image_holder">
+                <div class="col-xl-5 col-lg-3 col-md-12 about_image_holder">
                     <div class="about_image_circle" style="background: url('img/about_image.jpg') center center no-repeat; background-size: cover;"></div>
                 </div>
             </div>
@@ -265,67 +279,69 @@
                     </p>
                 </article>
                 <div class="product_boxes_holder w-100">
-                    <div class="col-sm-2 productbox">
+
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon rods"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Rods</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2  productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon reels"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Reels</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon terminaltackle"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Terminal Tackle</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon leader"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Leader</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon weights"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Weights</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon softbaits"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Soft Baits</h6>
                     </div> <!-- Product Box END -->
-                    <div class="clearfix"></div>
-                    <div class="col-sm-2 productbox">
+
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon hardbaits"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Hard Baits</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon apparel"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Apparel</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon engraving"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Custom Engraving</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon metalart"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Custom Metal Art</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon frozenbait"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">Frozen Bait</h6>
                     </div> <!-- Product Box END -->
-                    <div class="col-sm-2 productbox">
+                    <div class="col-sm-2 col-xs-12 productbox">
                         <div class="prod_icon morestuff"></div>
                         <hr class="minisepar">
                         <h6 class="p_title">More Cool Stuff</h6>
                     </div> <!-- Product Box END -->
+
                 </div> <!-- Product Boxes Holder END -->
             </div>
         </div>
@@ -340,7 +356,7 @@
                     <span class="title_deco centered"></span>
                 </div>
                 <div class="gapmaker60"></div>
-                <div class="col-sm-6 servicebox_holder">
+                <div class="col-lg-6 col-md-12 servicebox_holder">
                     <div class="servicebox" style="background: url('img/service_1.jpg') center center no-repeat; background-size: cover;">
                         <div class="upriser">
                             <div class="upriser_content_holder">
@@ -357,7 +373,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 servicebox_holder">
+                <div class="col-lg-6 col-md-12 servicebox_holder">
                     <div class="servicebox" style="background: url('img/service_2.jpg') center center no-repeat; background-size: cover;">
                         <div class="upriser">
                             <div class="upriser_content_holder">
@@ -375,7 +391,7 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="col-sm-6 servicebox_holder">
+                <div class="col-lg-6 col-md-12 servicebox_holder">
                     <div class="servicebox" style="background: url('img/service_3.jpg') center center no-repeat; background-size: cover;">
                         <div class="upriser">
                             <div class="upriser_content_holder">
@@ -393,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 servicebox_holder">
+                <div class="col-lg-6 col-md-12 servicebox_holder">
                     <div class="servicebox" style="background: url('img/service_4.jpg') center center no-repeat; background-size: cover;">
                         <div class="upriser">
                             <div class="upriser_content_holder">
@@ -474,7 +490,7 @@
                     <span class="title_deco centered"></span>
                 </div>
                 <div class="gapmaker80"></div>
-                <div class="col-sm-6 map_holder">
+                <div class="col-lg-6 col-md-12 map_holder">
                     <iframe class="bluffsmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.50563957977!2d-82.81840608503553!3d27.917140182705438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fa038fd946b1%3A0x1e08f539b47aeba9!2s2715%20W%20Bay%20Dr%2C%20Belleair%20Bluffs%2C%20FL%2033770%2C%20USA!5e0!3m2!1sen!2s!4v1610915975139!5m2!1sen!2s" width="100%" height="330" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     <div class="undermap_rect">
                         <div class="address_details_holder">
@@ -488,7 +504,7 @@
                     </div>
                 </div> <!-- Map Holder END -->
 
-                <div class="col-sm-6 contact_form_holder">
+                <div class="col-lg-6 col-md-12 contact_form_holder">
                     <form id="bluffsContactForm" class="bluffs_contact_form" role="form">
                         <div class="form-group">
                             <label for="name" class="form-label"></label>
@@ -531,7 +547,6 @@
                     <div class="f_notes_holder">
                         <small>&copy;2021 Bluffs Tackle & Marine, All RIghts Reserved</small>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -549,7 +564,6 @@
 <script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
 <script type="text/javascript" src="js/slick-lightbox.js"></script>
 <script type="text/javascript" src="js/bluff.js"></script>
-
 
 </body>
 

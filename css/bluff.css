@@ -59,6 +59,7 @@ input:disabled, input[disabled] {
 .bg-light {
     background-color: #fefefe !important;
     box-shadow: 0 0 90px -6px rgba(0,0,0,0.09);
+    z-index: 10;
 }
 
 img.nav_logo {
@@ -70,6 +71,7 @@ img.nav_logo {
 ul.bluffs_navbar {
     position: relative;
     top: 5px;
+    z-index: 7;
 }
 
 li.nav-item {
@@ -126,6 +128,28 @@ button.nav_contact_btn:focus {
     box-shadow: none !important;
 }
 
+.bluffs_nav_toggler {
+    border: none !important;
+}
+
+.bluffs_nav_toggler:focus {
+    box-shadow: 0 0 0 0.0rem;
+}
+
+.bluffs_nav_toggler > span.navbar-toggler-icon {
+    transition: 0.4s all ease-in-out;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(50,89,143, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.colorfuse {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(227,190,57, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    transform: rotate(90deg);
+}
+
+.bluffs_nav_toggler:not(:focus) > span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(50,89,143, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 
 
 
@@ -166,7 +190,7 @@ button.nav_contact_btn:focus {
     left: 0;
     right: 0;
     top: 275px;
-    z-index: 5;
+    z-index: 2;
 }
 
 .h_banner h1 {
@@ -186,7 +210,7 @@ hr.tagline_separator {
     margin-top: 20px;
     margin-bottom: 20px;
     display: block;
-    z-index: 20;
+    z-index: 2;
     background: #E3BE39;
     opacity: 0.8;
 }
@@ -248,14 +272,14 @@ button.explore_more_cta_btn:focus {
 }
 
 .partner_brands_slider_holder {
-    padding-left: 46px;
+    padding-left: 0;
 }
 
 .partnerbrand_logo {
     display: block;
-    height: 85px;
-    width: 13rem !important;
-    background-size: contain;
+    height: 75px;
+    width: 13em;
+    margin: 0 auto;
 }
 
 
@@ -421,6 +445,7 @@ article.team_member_info p {
     min-height: 850px;
     height: auto;
     padding-top: 80px;
+    padding-bottom: 55px;
     background: #ffffff;
 }
 
@@ -443,6 +468,7 @@ article.section_intro p {
     position: relative;
     padding-top: 50px;
     width: 100%;
+    text-align: center;
 }
 
 .productbox {

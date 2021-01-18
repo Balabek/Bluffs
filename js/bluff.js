@@ -5,7 +5,6 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href') ).offset().top -1
         }, 800);
-        // $('.collapse').removeClass('in');
     });
 
 
@@ -20,9 +19,18 @@ $(document).ready(function() {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1199,
                 settings: {
                     slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false
@@ -32,20 +40,12 @@ $(document).ready(function() {
                 breakpoint: 767,
                 settings: {
                     dots: false,
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    dots: false,
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 390,
                 settings: {
                     dots: false,
                     slidesToShow: 1,
@@ -55,7 +55,7 @@ $(document).ready(function() {
         ]
     });
 
-    // Partner brands slider
+    // Team Members slider
     $('.team_slider').slick({
         dots: true,
         arrows: false,
@@ -66,38 +66,31 @@ $(document).ready(function() {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 991,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: false
+                    dots: true
                 }
             },
             {
                 breakpoint: 767,
                 settings: {
-                    dots: false,
+                    dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 500,
                 settings: {
                     dots: false,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
-            {
-                breakpoint: 480,
-                settings: {
-                    dots: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
+
         ]
     });
 
@@ -159,6 +152,18 @@ $(document).ready(function() {
     ScrollReveal().reveal('.servicebox', {delay: 300});
     ScrollReveal().reveal('.map_holder', {delay: 300});
     ScrollReveal().reveal('.bluffs_contact_form', {delay: 300});
+
+
+    // Color change for hamburger menu SVG
+    $('.navbar-toggler-icon').on('click', function(){
+        $(this).toggleClass('colorfuse');
+    });
+
+
+    // Close the collapse navbar after a menu link is clicked
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 
 
 });
