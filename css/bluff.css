@@ -686,14 +686,25 @@ article.service_description {
     padding-top: 26px;
     padding-left: 18px;
     padding-right: 18px;
+    min-height: 180px;
+    height: auto;
+    text-overflow: ellipsis;
 }
 
 article.service_description p {
-     font-size: 1rem;
-     color: #666666;
-     text-align: center;
-     line-height: 1.6;
-     margin-bottom: 12px;
+    min-height: 100px;
+    height: auto;
+    font-size: 1rem;
+    color: #666666;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 12px;
+
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }
 
 hr.final_hr {
@@ -889,6 +900,13 @@ textarea.bluffs_txtarea {
     border: 1px solid #E1E1E1;
     border-radius: 1px;
     resize: none;
+}
+
+textarea.bluffs_txtarea:focus {
+    background: #F9F9F9;
+    border: 1px solid #E1E1E1 !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .form-group-button {
