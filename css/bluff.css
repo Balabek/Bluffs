@@ -1099,5 +1099,69 @@ h1.comingsoontext {
 
 
 
+/* =========================== */
+/* ==== Error 404 ==== */
+/* =========================== */
 
+.not_found_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: #fefefe;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.not_found {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.notfound_txt_holder {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+}
+
+.notfound_txt_holder h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #32598F;
+    font-size: 12rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.notfound_txt_holder h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+    color: #32598F;
+    font-size: 3.1rem;
+    text-align: center;
+}
+
+.fish_404 {
+    position: absolute;
+    top: 32px;
+    right: 22px;
+    bottom: 0;
+    width: 675px;
+    height: 203px;
+    background: url('../img/Grouper.svg') center center no-repeat;
+    background-size: contain;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation: fadeIn 8s;
+    -moz-animation:    fadeIn 8s;
+    -o-animation:      fadeIn 8s;
+    animation:         fadeIn 8s;
+}
 
