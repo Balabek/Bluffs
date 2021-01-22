@@ -1022,7 +1022,79 @@ ul.f_socials li a:hover {
 
 
 
+/* ============= */
+/* =========== COMING SOON! =========== */
+/* ============= */
 
+.videobgd {
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.vid_loop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    -webkit-filter: brightness(41%);
+    filter: brightness(41%);
+}
+
+.comingsoon_banner_holder {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 50vh;
+    z-index: 50;
+}
+
+h1.comingsoontext {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 4.2rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation: fadeIn 12s;
+    -moz-animation:    fadeIn 12s;
+    -o-animation:      fadeIn 12s;
+    animation:         fadeIn 12s;
+}
+
+.logo_cut {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: -200px;
+    height: 145px;
+    width: 100%;
+    /*opacity: 0.10;*/
+    z-index: 1;
+    background: url(../img/bluffs_logo.svg) center center no-repeat;
+    background-size: contain;
+
+    -webkit-animation-name: fadeInDownBig;
+    animation-name: fadeInDownBig;
+    -webkit-animation: fadeInDownBig 3s;
+    -moz-animation:    fadeInDownBig 3s;
+    -o-animation:      fadeInDownBig 3s;
+    animation:         fadeInDownBig 3s;
+}
 
 
 

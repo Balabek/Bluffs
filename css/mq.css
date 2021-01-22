@@ -155,5 +155,14 @@
 
 
 
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
+/* =========== Coming Soon ========== */
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
 
+@media screen and (max-width: 515px){
+    h1.comingsoontext {font-size: 3rem;}
+}
 
+@media screen and (max-width: 420px){
+    h1.comingsoontext {font-size: 2.6rem;}
+}
