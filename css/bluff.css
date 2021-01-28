@@ -968,6 +968,7 @@ footer.bluffs_footer {
 
 .gamefish {
     position: absolute;
+    z-index: 0;
     top: 55px;
     right: 0;
     left: 22px;
@@ -982,6 +983,8 @@ ul.f_socials {
     display: inline-block;
     text-align: center;
     padding: 0;
+    position: relative;
+    z-index: 2;
 }
 
 ul.f_socials li {
